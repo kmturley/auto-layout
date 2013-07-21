@@ -1,7 +1,7 @@
 /*
     Navigation
     css styles specific to this module only
-*/
+
 
 .navigation {
     position: fixed;
@@ -12,7 +12,7 @@
     max-width: 960px;
     margin: 0 auto;
 }
-
+*/
 .navigation ul {
     margin: 0;
     padding: 0;
@@ -24,5 +24,5 @@
 
 .navigation a {
     display: block;
-    padding: 10px 15px 15px 15px;
+    margin: 10px 30px 15px 0;
 }

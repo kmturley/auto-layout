@@ -4,7 +4,10 @@
 */
 
 .banner {
-
+    padding-top: 300px;
+    padding-bottom: 20px;
+    text-shadow: 1px 1px 7px #000000;
+    filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 
 .banner h1 {
@@ -23,15 +26,10 @@
     padding: 20px 20px 20px 20px;
 }
 
-.banner {
+.section2 {
+    margin-bottom: 20px;
     background-image: url('../images/alley.jpg');
     background-position: 49% 49%;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.banner {
-    padding-top: 300px;
-    text-shadow: 1px 1px 7px #000000;
-    filter: dropshadow(color=#000000, offx=1, offy=1);
 }

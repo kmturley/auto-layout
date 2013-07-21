@@ -3,15 +3,15 @@
 $data = array(
     array(
         "type" => "section",
-        "class" => " w1of1",
+        "class" => " dark bg1",
         "data" => array(
             array(
                 "type" => "row",
-                "class" => "",
+                "class" => " w960 auto",
                 "data" => array(
                     array(
                         "type" => "col",
-                        "class" => " w1of1 dark",
+                        "class" => " w1of1",
                         "data" => 'Navigation'
                     )
                 )
@@ -20,15 +20,15 @@ $data = array(
     ),
     array(
         "type" => "section",
-        "class" => " w960 auto",
+        "class" => " dark section2",
         "data" => array(
             array(
                 "type" => "row",
-                "class" => "",
+                "class" => " w960 auto",
                 "data" => array(
                     array(
                         "type" => "col",
-                        "class" => " w1of1 dark",
+                        "class" => " w1of1",
                         "data" => 'Banner'
                     )
                 )
@@ -98,7 +98,7 @@ function renderView($items) {
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Products</title>
+    <title>Auto Layout</title>
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
     <link href="css/base/reset.css" rel="stylesheet" />
     <link href="css/base/layout.css" rel="stylesheet" />
