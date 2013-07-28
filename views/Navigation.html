@@ -1,0 +1,7 @@
+<div class="{{ classes }}">
+    <ul class="bg1">
+        {% for item in model %}
+        <li><a href="{{ root }}{% if item.url %}{{ item.url }}/{% endif %}" class="{% if sections.0 == item.url %}c1{% else %}c2{% endif %}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

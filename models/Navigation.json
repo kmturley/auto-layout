@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Home",
+        "url": ""
+    },
+    {
+        "name": "Layout",
+        "url": "layout"
+    },
+    {
+        "name": "Themes",
+        "url": "themes"
+    },
+    {
+        "name": "Modules",
+        "url": "modules"
+    },
+    {
+        "name": "Reset",
+        "url": "reset"
+    }
+]

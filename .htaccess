@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^img/(.*)$ static/img/$1 [END]
+RewriteRule ^css/(.*)$ static/css/$1 [END]
+RewriteRule ^js/(.*)$ static/js/$1 [END]
+
+RewriteRule (.*)$ index.php [END]

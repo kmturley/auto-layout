@@ -1,0 +1,70 @@
+[
+    {
+        "view": "Section",
+        "classes": "dark bg1",
+        "model": [
+            {
+                "view": "Row",
+                "classes": "w960 auto",
+                "model": [
+                    {
+                        "view": "Col",
+                        "classes": "w1of1",
+                        "model": [
+                            {
+                                "view": "Navigation",
+                                "model": "Navigation"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "view": "Section",
+        "classes": "light bg1",
+        "model": [
+            {
+                "view": "Row",
+                "classes": "w960 auto",
+                "model": [
+                    {
+                        "view": "Col",
+                        "classes": "w1of1",
+                        "model": [
+                            {
+                                "view": "Banner",
+                                "model": "Banner",
+                                "index": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "view": "Section",
+        "classes": "w960 auto",
+        "model": [
+            {
+                "view": "Row",
+                "classes": "flow-m",
+                "model": [
+                    {
+                        "view": "Col",
+                        "classes": "w1of1",
+                        "model": [
+                            {
+                                "view": "Panel",
+                                "model": "Panel",
+                                "index": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
