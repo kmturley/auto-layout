@@ -1,0 +1,126 @@
+[
+    {
+        "url": "",
+        "view": "Base",
+        "classes": "default flow-xs",
+        "title": "Alley",
+        "model": [
+            {
+                "view": "Section",
+                "classes": "dark bg1",
+                "model": "Navigation"
+            },
+            {
+                "view": "Section",
+                "classes": "dark section2",
+                "model": "Banner",
+                "index": 0
+            },
+            {
+                "view": "Section",
+                "classes": "w960 auto",
+                "model": "Panel"
+            }
+        ]
+    },
+    {
+        "url": "layout*",
+        "view": "Base",
+        "classes": "default flow-xs",
+        "title": "Alley",
+        "model": [
+            {
+                "view": "Section",
+                "classes": "dark bg1",
+                "model": "Navigation"
+            },
+            {
+                "view": "Section",
+                "classes": "light bg1",
+                "model": "Banner",
+                "index": 1
+            },
+            {
+                "view": "Section",
+                "classes": "w960 auto",
+                "model": "Code",
+                "index": 1
+            }
+        ]
+    },
+    {
+        "url": "themes*",
+        "view": "Base",
+        "classes": "default flow-xs",
+        "title": "Alley",
+        "model": [
+            {
+                "view": "Section",
+                "classes": "dark bg1",
+                "model": "Navigation"
+            },
+            {
+                "view": "Section",
+                "classes": "light bg1",
+                "model": "Banner",
+                "index": 2
+            },
+            {
+                "view": "Section",
+                "classes": "w960 auto",
+                "model": "Code",
+                "index": 2
+            }
+        ]
+    },
+    {
+        "url": "modules*",
+        "view": "Base",
+        "classes": "default flow-xs",
+        "title": "Alley",
+        "model": [
+            {
+                "view": "Section",
+                "classes": "dark bg1",
+                "model": "Navigation"
+            },
+            {
+                "view": "Section",
+                "classes": "light bg1",
+                "model": "Banner",
+                "index": 3
+            },
+            {
+                "view": "Section",
+                "classes": "w960 auto",
+                "model": "Code",
+                "index": 3
+            }
+        ]
+    },
+    {
+        "url": "reset*",
+        "view": "Base",
+        "classes": "default flow-xs",
+        "title": "Alley",
+        "model": [
+            {
+                "view": "Section",
+                "classes": "dark bg1",
+                "model": "Navigation"
+            },
+            {
+                "view": "Section",
+                "classes": "light bg1",
+                "model": "Banner",
+                "index": 4
+            },
+            {
+                "view": "Section",
+                "classes": "w960 auto",
+                "model": "Code",
+                "index": 4
+            }
+        ]
+    }
+]

@@ -36,7 +36,7 @@ class SimpleCMS {
     private function checkUrls($items) {
         foreach ($items as $item) {
             if (isset($item['url'])) {
-                //echo $item['url'].' '.$this->sectionstring.' '.fnmatch($item['url'], $this->sectionstring)."\n";
+                //echo $item['url'].' '.$this->sectionstring.' '.fnmatch($item['url'], $this->sectionstring)."<br/>\n";
                 if (fnmatch($item['url'], $this->sectionstring)) {
                     return $item;
                 }
@@ -75,9 +75,6 @@ class SimpleCMS {
                 $item['model'] = $this->loadFile('models/'.$item['model'].'.json');
             }
             $item['model'] = $this->loadModelList($item['model']);
-            if (isset($item['index'])) {
-                $item['item'] = $item['model'][$item['index']];
-            }
         }
         return $item;
     }
@@ -86,10 +83,10 @@ class SimpleCMS {
      * Loop through the data and load views
      * @param {Object} items A list of data items to loop through
      */
-    private function loadViewList($items) {
+    private function loadViewList($items, $index = null) {
         $html = '';
         foreach ($items as &$item) {
-            $html .= $this->loadView($item);
+            $html .= $this->loadView($item, $index);
         }
         return $html;
     }
@@ -98,15 +95,21 @@ class SimpleCMS {
      * Load a single view
      * @param {Object} item single object item
      */
-    private function loadView($item) {
+    private function loadView($item, $index = null) {
+        if (isset($item['index'])) {
+            $index = $item['index'];
+        }
         if (isset($item['model'])) {
-            $item['html'] = $this->loadViewList($item['model']);
+            $item['html'] = $this->loadViewList($item['model'], $index);
         }
         if (isset($item['view'])) {
             if (isset($item['classes'])) {
                 $item['classes'] = strtolower($item['view']).' '.$item['classes'];
             } else {
                 $item['classes'] = strtolower($item['view']);
+            }
+            if (isset($item['map']) && isset($index)) {
+                $item['item'] = $item['model'][$index];
             }
             $item['root'] = $this->root;
             $item['sections'] = $this->sections;
@@ -118,5 +121,6 @@ class SimpleCMS {
         }
         return '';
     }
+  
 }
 ?>

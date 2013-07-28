@@ -1,7 +1,19 @@
 [
     {
-        "image": "img/alley.jpg",
-        "title": "Alley",
-        "desc": "No bloat layouts"
+        "view": "Row",
+        "classes": "w960 auto",
+        "model": [
+            {
+                "view": "Col",
+                "classes": "w1of1",
+                "model": [
+                    {
+                        "view": "Banner",
+                        "model": "data/Banner",
+                        "map": true
+                    }
+                ]
+            }
+        ]
     }
 ]

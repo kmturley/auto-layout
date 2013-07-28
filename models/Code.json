@@ -1,15 +1,16 @@
 [
     {
         "view": "Row",
-        "classes": "w960 auto",
+        "classes": "flow-m",
         "model": [
             {
                 "view": "Col",
                 "classes": "w1of1",
                 "model": [
                     {
-                        "view": "Navigation",
-                        "model": "data/Navigation"
+                        "view": "Code",
+                        "model": "data/Code",
+                        "map": true
                     }
                 ]
             }
