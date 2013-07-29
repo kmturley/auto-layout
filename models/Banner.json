@@ -1,19 +1,27 @@
 [
     {
-        "view": "Row",
-        "classes": "w960 auto",
-        "model": [
-            {
-                "view": "Col",
-                "classes": "w1of1",
-                "model": [
-                    {
-                        "view": "Banner",
-                        "model": "data/Banner",
-                        "map": true
-                    }
-                ]
-            }
-        ]
+        "image": "img/alley.jpg",
+        "title": "Alley",
+        "desc": "No bloat layouts"
+    },
+    {
+        "image": "img/alley.jpg",
+        "title": "Layout",
+        "desc": "Responsive multi-column grid"
+    },
+    {
+        "image": "img/alley.jpg",
+        "title": "Themes",
+        "desc": "Object-oriented themes"
+    },
+    {
+        "image": "img/alley.jpg",
+        "title": "Modules",
+        "desc": "Modular javascript with dependancies and inheritance"
+    },
+    {
+        "image": "img/alley.jpg",
+        "title": "Reset",
+        "desc": "Cross browser styles based on yahoo reset"
     }
 ]

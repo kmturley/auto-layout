@@ -1,18 +1,22 @@
 [
     {
-        "view": "Row",
-        "classes": "w960 auto",
-        "model": [
-            {
-                "view": "Col",
-                "classes": "w1of1",
-                "model": [
-                    {
-                        "view": "Navigation",
-                        "model": "data/Navigation"
-                    }
-                ]
-            }
-        ]
+        "name": "Home",
+        "url": ""
+    },
+    {
+        "name": "Layout",
+        "url": "layout"
+    },
+    {
+        "name": "Themes",
+        "url": "themes"
+    },
+    {
+        "name": "Modules",
+        "url": "modules"
+    },
+    {
+        "name": "Reset",
+        "url": "reset"
     }
 ]

@@ -6,24 +6,24 @@ class SimpleCMS {
     private $twig;
 
     public function SimpleCMS($url) {
-        // load classes
         require_once 'Router.php';
         require_once 'controllers/libs/Twig/Autoloader.php';
         
         // init the classes
         Twig_Autoloader::register();
-        $this->router = new Router();
         $this->loader = new Twig_Loader_Filesystem('views');
         $this->twig = new Twig_Environment($this->loader);
+        $this->router = new Router();
+        
+        // set some globals
         $this->root = $this->router->getRoot();
         $this->sections = $this->router->getSections();
-        $this->sectionstring = $this->router->getSectionsString();
         
-        // load and parse the data
+        // load the correct page data and any dependancies
         $urls = $this->loadFile('models/'.$url.'.json');
-        $page = $this->checkUrls($urls);
+        $page = $this->checkUrls($urls, $this->router->getSectionsString());
         $items = $this->loadModel($page);
-        $html = $this->loadView($items);
+        $html = $this->twig->render('Base.html', array('item' => $items));
         
         //print_r($items);
         echo $html;
@@ -33,18 +33,16 @@ class SimpleCMS {
      * Check which url matches the data closest
      * @param {Object} items A list of data items to loop through
      */
-    private function checkUrls($items) {
+    private function checkUrls($items, $url) {
         foreach ($items as $item) {
-            if (isset($item['url'])) {
-                //echo $item['url'].' '.$this->sectionstring.' '.fnmatch($item['url'], $this->sectionstring)."<br/>\n";
-                if (fnmatch($item['url'], $this->sectionstring)) {
-                    return $item;
-                }
+            //echo $item['url'].' '.$this->sectionstring.' '.fnmatch($item['url'], $this->sectionstring)."<br/>\n";
+            if (fnmatch($item['view'], $url)) {
+                return $item;
             }
         }
         return $items[0];
     }
-    
+  
     /**
      * Load a json file and convert to a php object
      * @param {String} url The url of the file to load
@@ -61,6 +59,7 @@ class SimpleCMS {
     private function loadModelList($items) {
         foreach ($items as &$item) {
             $item = $this->loadModel($item);
+            $item['root'] = $this->root;
         }
         return $items;
     }
@@ -76,51 +75,9 @@ class SimpleCMS {
             }
             $item['model'] = $this->loadModelList($item['model']);
         }
+        $item['root'] = $this->root;
+        $item['sections'] = $this->sections;
         return $item;
     }
-    
-    /**
-     * Loop through the data and load views
-     * @param {Object} items A list of data items to loop through
-     */
-    private function loadViewList($items, $index = null) {
-        $html = '';
-        foreach ($items as &$item) {
-            $html .= $this->loadView($item, $index);
-        }
-        return $html;
-    }
-    
-    /**
-     * Load a single view
-     * @param {Object} item single object item
-     */
-    private function loadView($item, $index = null) {
-        if (isset($item['index'])) {
-            $index = $item['index'];
-        }
-        if (isset($item['model'])) {
-            $item['html'] = $this->loadViewList($item['model'], $index);
-        }
-        if (isset($item['view'])) {
-            if (isset($item['classes'])) {
-                $item['classes'] = strtolower($item['view']).' '.$item['classes'];
-            } else {
-                $item['classes'] = strtolower($item['view']);
-            }
-            if (isset($item['map']) && isset($index)) {
-                $item['item'] = $item['model'][$index];
-            }
-            $item['root'] = $this->root;
-            $item['sections'] = $this->sections;
-            if (file_exists('views/'.$item['view'].'.html')) {
-                return $this->twig->render($item['view'].'.html', $item);
-            } else {
-                return $this->twig->render('Default.html', $item);
-            }
-        }
-        return '';
-    }
-  
 }
 ?>

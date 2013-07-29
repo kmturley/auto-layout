@@ -1,19 +1,27 @@
 [
     {
-        "view": "Row",
-        "classes": "flow-m",
-        "model": [
-            {
-                "view": "Col",
-                "classes": "w1of1",
-                "model": [
-                    {
-                        "view": "Code",
-                        "model": "data/Code",
-                        "map": true
-                    }
-                ]
-            }
-        ]
+        "title": "",
+        "code": "",
+        "url": ""
+    },
+    {
+        "title": "Layout.css",
+        "code": ".row",
+        "url": "css/base/layout.css"
+    },
+    {
+        "title": "Themes.css",
+        "code": ".row",
+        "url": "css/base/themes.css"
+    },
+    {
+        "title": "Modules.css",
+        "code": ".row",
+        "url": "css/base/modules.css"
+    },
+    {
+        "title": "Reset.css",
+        "code": ".row",
+        "url": "css/base/reset.css"
     }
 ]

@@ -1,0 +1,51 @@
+[
+    {
+        "view": "Row",
+        "classes": "full dark bg1",
+        "model": [
+            {
+                "view": "Col",
+                "classes": "w1of1",
+                "model": [
+                    {
+                        "view": "Navigation",
+                        "model": "Navigation"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "view": "Row",
+        "classes": "full light bg1",
+        "model": [
+            {
+                "view": "Col",
+                "classes": "w1of1",
+                "model": [
+                    {
+                        "view": "Banner",
+                        "model": "Banner",
+                        "index": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "view": "Row",
+        "model": [
+            {
+                "view": "Col",
+                "classes": "w1of1",
+                "model": [
+                    {
+                        "view": "Code",
+                        "model": "Code",
+                        "index": 1
+                    }
+                ]
+            }
+        ]
+    }
+]

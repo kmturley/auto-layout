@@ -1,44 +1,17 @@
 [
     {
-        "view": "Row",
-        "classes": "flow-m",
-        "model": [
-            {
-                "view": "Col",
-                "classes": "w1of3",
-                "model": [
-                {
-                        "view": "Panel",
-                        "model": "data/Panel",
-                        "map": true,
-                        "index": 0
-                    }
-                ]
-            },
-            {
-                "view": "Col",
-                "classes": "w1of3",
-                "model": [
-                    {
-                        "view": "Panel",
-                        "model": "data/Panel",
-                        "map": true,
-                        "index": 1
-                    }
-                ]
-            },
-            {
-                "view": "Col",
-                "classes": "w1of3",
-                "model": [
-                    {
-                        "view": "Panel",
-                        "model": "data/Panel",
-                        "map": true,
-                        "index": 2
-                    }
-                ]
-            }
-        ]
+        "image": "img/alley.jpg",
+        "title": "Tiny footprint",
+        "desc": "1KB for the layout and reset css. Tested working on Firefox, Safari, Chrome, IE8+"
+    },
+    {
+        "image": "img/alley.jpg",
+        "title": "Completely responsive",
+        "desc": "Using percentages which adapt and reflow with your browser/screen size."
+    },
+    {
+        "image": "img/alley.jpg",
+        "title": "Object-oriented themes",
+        "desc": "Create reusable themes, keeping your layout and styling separate."
     }
 ]
